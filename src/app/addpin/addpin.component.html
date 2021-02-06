@@ -1,0 +1,6 @@
+<form #userData = 'ngForm' (ngSubmit)="onSubmit(userData.value)">
+  About:<input type="text" name="about" ngModel><br>
+  Data(Paste Your Content Here - Supports Html)<br>
+  <textarea name="data" rows="30" cols="100" ngModel ></textarea><br>
+  <button type="submit" >Save</button>
+</form>

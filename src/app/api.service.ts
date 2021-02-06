@@ -11,8 +11,11 @@ export class ApiService {
     return this.httpClient.get(`http://openpinner.mycryptowebs.com:4000/`);
   }
   public searchPins(InData:any){
-    console.log('inData',InData);
     var searchTerm = {'term': InData };
     return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,searchTerm);
+  }
+  public addPins(page:any){
+    var data = {'term': page ,'about':''};
+    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,data);
   }
 }
