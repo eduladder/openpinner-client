@@ -6,16 +6,15 @@ import { ApiService } from '../api.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
   li:any;
   lis=[];
   constructor(private apiService: ApiService) { }
   ngOnInit(): void {
       this.apiService.searchPins().subscribe((data)=>{
-      //  console.log('Search');
-       console.log('data',data);
-      // this.li=data;
-      // this.lis=this.li.pins;
+      //console.log('data',data);
+      this.li=data;
+      this.lis=this.li.results;
+  //    console.log(this.lis);
     });
   }
 

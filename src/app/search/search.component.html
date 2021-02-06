@@ -1,1 +1,20 @@
-<p>search works!</p>
+<h1>Search Results</h1>
+<table class="table" id='tab'>
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">About</th>
+        <th scope="col">Hash</th>
+        <th scope="col">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of lis ;">
+        <td><b>{{e["name"]}}</b></td>
+        <td><b>{{e["about"]}}</b></td>
+        <td><b>{{e["hash"]}}</b></td>
+        <td><b>{{e["date"]}}</b></td>
+      </tr>
+
+    </tbody>
+</table>
