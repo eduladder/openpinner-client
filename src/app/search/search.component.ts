@@ -6,15 +6,25 @@ import { ApiService } from '../api.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
   li:any;
   lis=[];
+  InData:any;
   constructor(private apiService: ApiService) { }
   ngOnInit(): void {
-      this.apiService.searchPins().subscribe((data)=>{
-      //console.log('data',data);
+      this.InData = ' ';
+      this.apiService.searchPins(this.InData).subscribe((data)=>{
       this.li=data;
       this.lis=this.li.results;
-  //    console.log(this.lis);
+    });
+  }
+
+  onSubmit(data:any){
+    console.log(data.term);
+    this.InData = data.term;
+    this.apiService.searchPins(this.InData).subscribe((data)=>{
+      this.li=data;
+      this.lis=this.li.results;
     });
   }
 

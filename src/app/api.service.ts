@@ -10,8 +10,9 @@ export class ApiService {
   public getPins(){
     return this.httpClient.get(`http://openpinner.mycryptowebs.com:4000/`);
   }
-  public searchPins(){
-    var InData = {'term': '' };
-    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,InData);
+  public searchPins(InData:any){
+    console.log('inData',InData);
+    var searchTerm = {'term': InData };
+    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,searchTerm);
   }
 }
