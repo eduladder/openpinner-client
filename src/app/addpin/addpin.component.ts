@@ -17,7 +17,7 @@ export class AddpinComponent implements OnInit {
     this.InData = data;
     this.apiService.addPins(this.InData).subscribe((data)=>{
       this.li=data;
-      this.lis=this.li.results;
+      this.lis=this.li;
     });
   }
 }

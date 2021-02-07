@@ -15,6 +15,7 @@ export class ApiService {
     return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,searchTerm);
   }
   public addPins(InData:any){
-    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,InData);
+    console.log(InData);
+    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/save`,InData);
   }
 }
