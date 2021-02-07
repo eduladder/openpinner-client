@@ -1,4 +1,4 @@
-# openpinner-client
+# openpinner-client (A simple client to pin your files to undeletable internet)
 This is the client app written in angular for openpinner - http://openpinner.mycryptowebs.com:4000/ <br>
 for more details visit:https://mycryptowebs.com/
 
