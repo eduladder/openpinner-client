@@ -8,14 +8,14 @@ import { PinlistComponent } from './pinlist/pinlist.component';
 export class ApiService {
   constructor(private httpClient: HttpClient) { }
   public getPins(){
-    return this.httpClient.get(`http://openpinner.mycryptowebs.com:4000/`);
+    return this.httpClient.get(`https://openpinner.mycryptowebs.com:4000/`);
   }
   public searchPins(InData:any){
     var searchTerm = {'term': InData };
-    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/search`,searchTerm);
+    return this.httpClient.post(`https://openpinner.mycryptowebs.com:4000/search`,searchTerm);
   }
   public addPins(InData:any){
     console.log(InData);
-    return this.httpClient.post(`http://openpinner.mycryptowebs.com:4000/save`,InData);
+    return this.httpClient.post(`https://openpinner.mycryptowebs.com:4000/save`,InData);
   }
 }
