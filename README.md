@@ -2,7 +2,7 @@
 This is the client app written in angular for openpinner - http://openpinner.mycryptowebs.com:4000/ <br>
 for more details visit:https://mycryptowebs.com/
 # Working Example on glitch
-https://living-olivine-asp.glitch.me/
+https://living-olivine-asp.glitch.me/ (This might take a bit time to get running on glitch based on the angular compaile time becose each time you load this glitch will do a new build)
 
 # Install angular
 
